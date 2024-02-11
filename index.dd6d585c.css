@@ -1,6 +1,7 @@
 :root {
   --navy-col: oklch(27.12% .19 264);
   --navy-highlight-col: oklch(45% .19 264);
+  --navy-list-highlight-col: oklch(75% .19 264);
   --white-col: oklch(100% 0 0);
   --gray-col: oklch(84.82% .01 242.86);
 }
@@ -167,15 +168,18 @@ h1.titre {
 
 .list__item a {
   color: #000;
-  padding: 2px 4px;
+  border: 2px solid #0000;
+  padding-block: 1px 3px;
+  padding-inline: 6px;
   font-weight: 500;
   text-decoration: none;
 }
 
 .list__item a:hover {
-  color: #fff;
-  background-color: var(--navy-highlight-col);
-  border-radius: 3px;
+  color: var(--navy-col);
+  background-color: var(--navy-list-highlight-col);
+  border-color: #000;
+  border-radius: 999px;
 }
 
 .list__comment {
