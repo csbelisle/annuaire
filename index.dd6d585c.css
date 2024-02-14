@@ -205,15 +205,23 @@ h1.titre {
 }
 
 .nouveau:after {
-  content: " [nouveau]";
-  color: red;
+  content: "nouveau";
+  color: #fff;
+  background-color: green;
+  border-radius: 3px;
+  margin-left: .5rem;
+  padding-inline: .3rem;
   font-size: .8em;
   font-weight: bold;
 }
 
 .change:after {
-  content: " [changé]";
-  color: red;
+  content: "changé";
+  color: #fff;
+  background-color: red;
+  border-radius: 3px;
+  margin-left: .5rem;
+  padding-inline: .3rem;
   font-size: .8em;
   font-weight: bold;
 }
