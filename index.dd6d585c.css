@@ -183,6 +183,7 @@ h1.titre {
 }
 
 .list__comment {
+  padding-inline: .2rem;
   font-style: italic;
 }
 
@@ -204,26 +205,24 @@ h1.titre {
   content: " :";
 }
 
+.nouveau:after, .change:after {
+  border-radius: 3px;
+  margin-left: .5rem;
+  padding-inline: .3rem;
+  font-size: .8rem;
+  font-weight: bold;
+}
+
 .nouveau:after {
   content: "nouveau";
   color: #fff;
   background-color: green;
-  border-radius: 3px;
-  margin-left: .5rem;
-  padding-inline: .3rem;
-  font-size: .8em;
-  font-weight: bold;
 }
 
 .change:after {
   content: "changé";
   color: #fff;
   background-color: red;
-  border-radius: 3px;
-  margin-left: .5rem;
-  padding-inline: .3rem;
-  font-size: .8em;
-  font-weight: bold;
 }
 
 .new-menu {
