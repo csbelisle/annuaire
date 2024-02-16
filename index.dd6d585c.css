@@ -1,9 +1,11 @@
 :root {
   --navy-col: oklch(27.12% .19 264);
+  --navy-col-lighter: oklch(35% .19 264);
   --navy-highlight-col: oklch(45% .19 264);
   --navy-list-highlight-col: oklch(75% .19 264);
   --white-col: oklch(100% 0 0);
   --gray-col: oklch(84.82% .01 242.86);
+  --black-col: 0 0 0;
 }
 
 * {
@@ -12,8 +14,8 @@
 
 main {
   width: 800px;
-  min-height: 90vh;
-  margin: auto;
+  min-height: 90dvh;
+  margin-inline: auto;
   position: relative;
 }
 
@@ -21,13 +23,14 @@ main {
   background-color: var(--navy-col);
   color: var(--white-col);
   text-align: center;
-  border-bottom: 1px solid gray;
+  border: 1px solid #00000080;
   border-radius: 10px 10px 10px 0;
   padding: 12px;
   font-family: serif;
   font-size: 3em;
   font-style: italic;
   font-weight: bold;
+  box-shadow: inset -.3rem -.3rem .5rem #ffffff4d, inset .3rem .3rem .3rem #fff9, .5rem .5rem 1rem #000000b3;
 }
 
 #titre:hover {
@@ -37,13 +40,15 @@ main {
 #gauche {
   background-color: var(--navy-col);
   color: #fff;
+  border: 1px solid #00000080;
   border-radius: 0 0 10px 10px;
   width: 135px;
-  height: 100%;
+  min-height: 93%;
   padding: 20px 5px;
   font-weight: bold;
   position: absolute;
   left: 0;
+  box-shadow: inset -.3rem -.3rem .5rem #ffffff4d, inset .1rem .1rem .2rem #fffc, .5rem .5rem 1rem #000000b3;
 }
 
 #gauche .maj {
@@ -65,24 +70,36 @@ main {
 #contenu {
   background-color: var(--gray-col);
   margin-block: 10px;
+  border: 1px solid #00000080;
   border-radius: 10px;
   width: 645px;
-  min-height: calc(100% - 20px);
+  min-height: 92%;
   margin-right: 10px;
-  padding: 20px;
+  padding: 20px 20px 2rem;
   position: absolute;
   left: 150px;
+  box-shadow: inset -.5rem -.5rem .5rem #808080b3, inset .5rem .5rem .2rem #fff3, 1rem 1rem 2rem #000000b3;
 }
 
 #contenu p {
   text-align: justify;
-  font-size: 14pt;
+  font-size: 1.2rem;
+}
+
+#contenu #bottom-padding {
+  height: 0;
+  position: absolute;
+  bottom: -1rem;
+}
+
+#contenu #bottom-padding:before {
+  content: " ";
 }
 
 nav a {
   color: var(--white-col);
   border-bottom: 1px solid gray;
-  padding: .5em;
+  padding: .45rem;
   font-family: sans-serif;
   font-size: 12px;
   font-weight: bold;
@@ -99,26 +116,35 @@ nav a:first-child {
 }
 
 h1, h2 {
-  padding-left: .5em;
+  color: #fff;
+  background-color: var(--navy-highlight-col);
+  border-radius: 5px;
+  padding-inline: .5em;
 }
 
 h1 {
   font-size: 1.5rem;
   font-weight: extrabold;
-  border-bottom: 4px solid #000;
+  border: 1px solid #000000b3;
+  padding-block: .3rem;
+  box-shadow: inset 2px 2px 3px 1px #fffc, inset -2px -2px 3px 1px #000;
 }
 
 h2 {
-  color: #2f4f4f;
-  border-color: #2f4f4f;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
+  background-color: var(--navy-list-highlight-col);
+  color: var(--navy-col-lighter);
+  border: 1px solid #0006;
+  padding-block: .2rem;
   font-size: 1.25rem;
+  box-shadow: inset 0 0 .3rem #ffffffb3, inset -1px -1px 3px 1px #000000b3;
 }
 
 h1.titre {
+  color: #000;
+  box-shadow: none;
   text-align: center;
-  border-bottom: none;
+  background-color: #0000;
+  border: none;
   margin: 0 0 1rem;
   padding: 0;
   font-size: 2.5rem;
