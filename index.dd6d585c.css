@@ -30,7 +30,7 @@ main {
   font-size: 3em;
   font-style: italic;
   font-weight: bold;
-  box-shadow: inset -.3rem -.3rem .5rem #ffffff4d, inset .3rem .3rem .3rem #fff9, .5rem .5rem 1rem #000000b3;
+  box-shadow: inset -.3rem -.3rem .5rem #ffffff4d, inset .3rem .3rem .3rem #fff9, .5rem .5rem .5rem #00000080;
 }
 
 #titre:hover {
@@ -48,7 +48,7 @@ main {
   font-weight: bold;
   position: absolute;
   left: 0;
-  box-shadow: inset -.3rem -.3rem .5rem #ffffff4d, inset .1rem .1rem .2rem #fffc, .5rem .5rem 1rem #000000b3;
+  box-shadow: inset -.3rem -.3rem .5rem #ffffff4d, inset .1rem .1rem .2rem #fffc, .5rem .5rem .5rem #00000080;
 }
 
 #gauche .maj {
