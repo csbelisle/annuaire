@@ -322,3 +322,13 @@ hr {
   margin: .7rem auto .5rem;
 }
 
+.notice {
+  color: #00f;
+  border: 1px solid #00f;
+  border-radius: 8px;
+  margin-block: 1rem;
+  margin-inline: 2rem;
+  padding: .6rem;
+  font-size: 1rem;
+}
+
