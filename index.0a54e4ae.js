@@ -2,13 +2,13 @@ class xLink extends HTMLElement {
     static css = `
     div {
       margin-right: 1em;
-      padding: 0;
     }
     a {
       text-decoration: none;
       color: black;
       padding-block: 1px 3px;
       padding-inline: 6px;
+      margin-left: -6px;
       font-weight: 500;
       border: 2px solid transparent;
       &:hover {
