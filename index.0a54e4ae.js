@@ -61,5 +61,48 @@ class xLink extends HTMLElement {
     `;
     }
 }
+class xButton extends HTMLElement {
+    static css = `
+    a {
+      display: inline-block;
+      width: fit-content;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: bold;
+      font-stretch: -0.1em;
+      font-size: 0.85rem;
+      font-family: sans-serif;
+      color: darkblue;
+      border: 2px solid darkblue;
+      border-radius: 8px;
+      padding: 0.4rem 0.6rem;
+      margin-inline: .15rem;
+      background-color: rgba(144, 144, 248, 0.2);
+      &:hover {
+        background-color: rgba(248, 144, 144, 0.2);
+        border-color: darkred;
+        color: darkred !important;
+      }
+      &:visited {
+        color: darkblue;
+      }
+    }
+  `;
+    constructor(){
+        super();
+        this.attachShadow({
+            mode: "open"
+        });
+    }
+    connectedCallback() {
+        const url = this.getAttribute("href");
+        const nom = this.innerHTML;
+        this.shadowRoot.innerHTML = `
+      <style>${xButton.css}</style>
+      <a href="${url}">${nom}</a>
+    `;
+    }
+}
 customElements.define("x-link", xLink);
+customElements.define("x-button", xButton);
 
