@@ -1,2 +1,2 @@
 # annuaire
-Annuaire personnel (adresses qui me sont intéressantes)
+Annuaire personnel (adresses qui me sont intéressantes).
