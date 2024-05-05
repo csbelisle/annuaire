@@ -1,1 +1,0 @@
-(function(){var t,e;for(document.createAttribute("target").value="_blank",t=document.getElementsByTagName("a"),e=0;e<t.length;)"http"===t[e].getAttributeNode("href").value.substring(0,4)&&t[e].setAttribute("target","_blank"),e++}).call(this);

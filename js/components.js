@@ -1,5 +1,5 @@
 class xLink extends HTMLElement {
-    static css = `
+  static css = `
     div {
       margin-right: 1em;
     }
@@ -36,33 +36,31 @@ class xLink extends HTMLElement {
     }
 
     .change:after {
-      content: "chang\xe9";
+      content: "changé";
       color: #fff;
       background-color: red;
     }
   `;
-    constructor(){
-        super();
-        this.attachShadow({
-            mode: "open"
-        });
-    }
-    connectedCallback() {
-        const url = this.getAttribute("href");
-        const nom = this.innerHTML;
-        const comment = this.getAttribute("comment") || "";
-        const status = this.getAttribute("status") || "";
-        this.shadowRoot.innerHTML = `
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" });
+  }
+  connectedCallback() {
+    const url = this.getAttribute("href");
+    const nom = this.innerHTML;
+    const comment = this.getAttribute("comment") || "";
+    const status = this.getAttribute("status") || "";
+    this.shadowRoot.innerHTML = `
       <style>${xLink.css}</style>
       <div class="${status}">
         <a href="${url}" target="_blank">${nom}</a>
         <span class="comment">${comment}</span>
       </div>
     `;
-    }
+  }
 }
 class xButton extends HTMLElement {
-    static css = `
+  static css = `
     a {
       display: inline-block;
       width: fit-content;
@@ -88,21 +86,18 @@ class xButton extends HTMLElement {
       }
     }
   `;
-    constructor(){
-        super();
-        this.attachShadow({
-            mode: "open"
-        });
-    }
-    connectedCallback() {
-        const url = this.getAttribute("href");
-        const nom = this.innerHTML;
-        this.shadowRoot.innerHTML = `
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" });
+  }
+  connectedCallback() {
+    const url = this.getAttribute("href");
+    const nom = this.innerHTML;
+    this.shadowRoot.innerHTML = `
       <style>${xButton.css}</style>
       <a href="${url}">${nom}</a>
     `;
-    }
+  }
 }
 customElements.define("x-link", xLink);
 customElements.define("x-button", xButton);
-
