@@ -31,13 +31,13 @@ class xLink extends HTMLElement {
 
     .nouveau:after {
       content: "nouveau";
-      color: #fff;
+      color: white;
       background-color: green;
     }
 
     .change:after {
       content: "changé";
-      color: #fff;
+      color: white;
       background-color: red;
     }
   `;
@@ -80,6 +80,7 @@ class xButton extends HTMLElement {
         background-color: rgba(248, 144, 144, 0.2);
         border-color: darkred;
         color: darkred !important;
+        scale: 1.05;
       }
       &:visited {
         color: darkblue;
